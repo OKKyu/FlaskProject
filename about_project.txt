@@ -1,0 +1,44 @@
+本プロジェクトはflaskでWebアプリを作成する際に最低限必要な構成要素をコピーペーストですぐ用意できるように
+するためのプロジェクトです。
+
+setup.sh  
+ コマンドラインから実行することでインストールされたクライアント上に環境を構築します。
+ リリース前に事前に pip freeze > requirements.txt で依存ライブラリの設定をしておくこと。
+
+run.sh
+ venvの仮想環境を起動し、WSGI上でWebアプリを実行します。
+ 事前にsetup.shがエラーなく完了していること。
+ セッション数、ホスト名、ポート番号はbashのコマンド引数から渡された値を使うようにしているため、
+ 実行時に設定すること。
+ WSGIではgunicornを使用している。requirements.txtの作成時にはgunicornも仮想環境にイン
+ ストールしておくこと。gunicornを使わない場合は適宜setup.shおよびrun.shを修正すること。
+
+README.md
+ Webアプリの説明を記載する。
+
+requirement.txt
+ Webアプリの依存ライブラリを記載するファイル。詳細は "pip freeze" 等でググると良いでしょう。
+
+main.py
+ flaskアプリの本体。
+
+daoフォルダ
+ DB関連のpythonコードを格納する。
+
+envフォルダ
+ Webアプリ固有の設定ファイルがあれば格納する。
+
+staticフォルダ
+ flaskWebアプリのstaticフォルダ。
+ css、画像（アプリアイコン）など静的ファイルを格納する。
+ 尚、cssについてはメディアクエリでレスポンシブデザインを実現する想定で、
+ cssを共通用、mobile用、table用、pc用の4つを用意している。
+
+templatesフォルダ
+ html、javascriptなどを格納する。 
+
+dataフォルダ
+ 処理に必要なデータを格納するファイル。SQLiteの.dbファイルやcsvファイルなど。
+ git上にはデータ内容はコミットしないこと。
+
+
