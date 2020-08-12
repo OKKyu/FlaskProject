@@ -1,4 +1,5 @@
-# coding: utf-8
+#!python3
+# -*- coding: utf-8 -*-
 from pathlib import Path
 from flask import Flask, render_template, Markup, request, jsonify
 import logging
@@ -29,5 +30,9 @@ def markupSample():
     return Markup('<strong>Hello {}!</strong>').format('<blink>hacker</blink>')
 
 if __name__ == '__main__':
-    #app.run()
+    #using log.conf for develop mode.
+    logging.config.fileConfig(fname='log_develop.conf', disable_existing_loggers=False)
     app.run(host='0.0.0.0', debug=True, port=5002)
+else:
+    #using log.conf for deploy mode.
+    logging.config.fileConfig(fname='log_honban.conf', disable_existing_loggers=False)
