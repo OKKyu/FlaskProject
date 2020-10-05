@@ -6,10 +6,10 @@
   Andalso, purpose of coding efficiency by reuse this template.  
 
 # Requirement
-  python3, python3-venv (>=3.5)  
+  python3, python3-venv
 
 # Download
-  please copy your preference directory.  
+  please copy you to your any directory. 
 
 # setup
  please run setup.sh  
@@ -18,7 +18,7 @@
  third,  dependency library is imported by pip requirements.txt
 
 # run
- please type shell bellow.
+ please type shell below.
    run run.sh  worker-num  hostname(ip address) portnum
  
  This shell use gunicorn with WSGI.
