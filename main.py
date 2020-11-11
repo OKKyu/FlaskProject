@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 from pathlib import Path
 from flask import Flask, render_template, Markup, request, jsonify
-import logging
+import logging.config
 app = Flask(__name__)
 
 @app.route("/")
