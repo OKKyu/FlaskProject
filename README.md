@@ -1,7 +1,7 @@
 # Name
   FlaskProject
 
-# overwiev
+# overview
   This project is created for author's learn and practice about flask web framework.  
   Andalso, purpose of coding efficiency by reuse this template.  
 
